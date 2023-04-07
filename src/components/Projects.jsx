@@ -62,6 +62,7 @@ const Projects = () => {
               github={selectedProject.GHurl}
               live={selectedProject.url}
               convo={selectedProject.convo}
+              images={selectedProject.images}
             />
           )}
         </div>
