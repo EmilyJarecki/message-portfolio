@@ -1,0 +1,23 @@
+html {
+    height: 100%;
+    width: auto !important;
+    overflow-y: hidden !important;
+    overflow-x: hidden !important;
+    position: relative;
+  }
+  body {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(235, 233, 230);
+    width: auto !important;
+    /* overflow-y: hidden !important;
+    overflow-x: hidden !important; */
+    /* position:relative; */
+  }
+.parent {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
