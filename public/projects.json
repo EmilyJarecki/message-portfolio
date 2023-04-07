@@ -4,6 +4,7 @@
     "startDate": "2023",
     "short_description":"A task & reward gamification app",
     "description": "A collaboration with 4 Software Developers and 3 UI/UX designers to create a gamified task assignment and reward system using MERN, 4 relational database models, and user authentication in a 4-day hackathon that won crowd favorite.",
+    "convo": ["Behold Quest Runner!", "Built during the GA 4-day Hackathon!", "It won Crowd Favorite.", "MERN-Stack"],
     "images": [
       "images/QuestRunner/p2.jpg",
       "images/QuestRunner/p1.jpg",
@@ -14,7 +15,8 @@
     ],
     "url": "https://quest-runner.netlify.app/",
     "GHurl": "https://github.com/npereznyc/task-quest-frontend",
-    "tech": "React.js • JavaScript • HTML5 • CSS3 • MongoDB • Express.js • Node.js •  Bootstrap • JSX"
+    "tech": "React.js • JavaScript • HTML5 • CSS3 • MongoDB • Express.js • Node.js •  Bootstrap • JSX",
+    "starred":"yes"
   },
   {
     "title": "Spotify",
@@ -26,7 +28,9 @@
       "images/Spotify/p1.jpg"
     ],
     "GHurl": "https://github.com/EmilyJarecki/Spotify_Django",
-    "tech": "Python • Django • PostgreSQL • HTML5 • CSS3 • JQuery"
+    "tech": "Python • Django • PostgreSQL • HTML5 • CSS3 • JQuery",
+    "starred":"yes"
+
   },
   {
     "title": "Aviato",
@@ -42,7 +46,9 @@
     ],
     "url": "https://aviato-e-comm.netlify.app",
     "GHurl": "https://github.com/EmilyJarecki/e-commerce",
-    "tech": "React.js • JavaScript • HTML5 • CSS3 • MongoDB • Express.js • Node.js • Heroku • Netlify • Bootstrap • Bcrypt • JSX"
+    "tech": "React.js • JavaScript • HTML5 • CSS3 • MongoDB • Express.js • Node.js • Heroku • Netlify • Bootstrap • Bcrypt • JSX",
+    "starred":"yes"
+
   },
   {
     "title": "Twitter 2.0",
@@ -55,7 +61,8 @@
     ],
     "url": "https://twittertwopoint0.netlify.app/",
     "GHurl": "https://github.com/orgs/SpeakerTwitter/repositories",
-    "tech": "React.js • JavaScript • HTML5 • CSS3 • MongoDB • Express.js • Node.js • Heroku • Netlify • Bootstrap • JSX"
+    "tech": "React.js • JavaScript • HTML5 • CSS3 • MongoDB • Express.js • Node.js • Heroku • Netlify • Bootstrap • JSX",
+    "starred":"yes"
   },
   {
     "title": "Portfolio Template",
@@ -65,7 +72,8 @@
     "images": ["images/Port/p1.jpg"],
     "url": "https://portfoliocoverpage.netlify.app",
     "GHurl": "https://github.com/EmilyJarecki/newspaper-portfolio-page",
-    "tech": "HTML5 • CSS3"
+    "tech": "HTML5 • CSS3",
+    "starred":""
   },
   {
     "title": "HyperRealism",
@@ -75,7 +83,8 @@
     "images": ["images/Calc/p1.jpg"],
     "url": "https://throwbackcalc.netlify.app",
     "GHurl": "https://github.com/EmilyJarecki/calculator",
-    "tech": "JavaScript • HTML5 • CSS3"
+    "tech": "JavaScript • HTML5 • CSS3",
+    "starred":""
   },
   {
     "title": "Interval Timer",
@@ -85,7 +94,8 @@
     "images": ["images/Timer/p1.jpg"],
     "url": "https://roundintervaltimer.netlify.app",
     "GHurl": "https://github.com/EmilyJarecki/intervaltimer",
-    "tech": "JavaScript • HTML5 • CSS3"
+    "tech": "JavaScript • HTML5 • CSS3",
+    "starred":""
   },
   {
     "title": "The Weather Window",
@@ -98,7 +108,8 @@
     ],
     "url": "https://weather-window.netlify.app",
     "GHurl": "https://github.com/EmilyJarecki/Project-2-Weather-App",
-    "tech": "HTML5 • CSS3 • React.js • Node.js • Bootstrap"
+    "tech": "HTML5 • CSS3 • React.js • Node.js • Bootstrap",
+    "starred":""
   },
   {
     "title": "2048",
@@ -108,7 +119,8 @@
     "images": ["images/2048/p1.jpg"],
     "url": "https://iridescent-melba-0e8849.netlify.app",
     "GHurl": "https://github.com/EmilyJarecki/my2048",
-    "tech": "JavaScript • HTML5 • CSS3"
+    "tech": "JavaScript • HTML5 • CSS3",
+    "starred":""
   },
   {
     "title": "Candy Crush Memory Match",
@@ -118,6 +130,7 @@
     "images": ["images/CandyCrush/p1.jpg"],
     "url": "https://splendorous-kashata-58ad30.netlify.app",
     "GHurl": "https://github.com/EmilyJarecki/Candy-Crush-Saga-Memory-Matcher",
-    "tech": "JavaScript • HTML5 • CSS3"
+    "tech": "JavaScript • HTML5 • CSS3",
+    "starred":""
   }
 ]

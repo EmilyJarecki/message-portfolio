@@ -1,12 +1,21 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from "react";
 
-const Messaging = ({description}) => {
+const Messaging = ({ title, description, github, live, convo }) => {
   return (
     <div>
-      <h1>Messaging</h1>
+      <div className="sticky">
+        <p>{title}</p>
+        <p>{github}</p>
+        <p>{live}</p>
+      </div>
+      <div>
+      {convo.map((item, index) => (
+          <p key={index} className="convo-item">{item}</p>
+        ))}
+      </div>
       <p>{description}</p>
     </div>
-  )
-}
+  );
+};
 
-export default Messaging
+export default Messaging;

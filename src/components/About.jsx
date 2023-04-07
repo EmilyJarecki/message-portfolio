@@ -56,9 +56,9 @@ const About = () => {
               <h2>Contact</h2>
               {isOpenContact && (
                 <div>
-                  <p>{desc.linkedIn}</p>
-                  <p>{desc.github}</p>
-                  <p>{desc.email}</p>
+                  <p><a href={desc.linkedIn} target="_blank">LinkedIn</a></p>
+                  <p><a href={desc.github} target="_blank">GitHub</a></p>
+                  <p><a href="mailto:jareckiemily@yahoo.com" className="email">jareckiemily@yahoo.com</a></p>
                 </div>
               )}
             </div>
