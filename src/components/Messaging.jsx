@@ -9,10 +9,11 @@ const Messaging = ({ title, description, github, live, convo, images }) => {
 
   const handleButtonClick = () => {
     if (inputValue === "yes") {
-      setOutput("okay");
+      setOutput("Okay! Here they are!");
     } else {
       setOutput("");
     }
+    setInputValue(""); // Clear the input value
   };
 
   return (
