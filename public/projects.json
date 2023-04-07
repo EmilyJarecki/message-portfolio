@@ -1,0 +1,101 @@
+[
+  {
+    "title": "Quest Runner",
+    "startDate": "2023",
+    "short_description":"",
+    "description": "A collaboration with 4 Software Developers and 3 UI/UX designers to create a gamified task assignment and reward system using MERN, 4 relational database models, and user authentication in a 4-day hackathon that won crowd favorite.",
+    "images": [],
+    "url": "https://quest-runner.netlify.app/",
+    "GHurl": "https://github.com/npereznyc/task-quest-frontend",
+    "tech": "React.js • JavaScript • HTML5 • CSS3 • MongoDB • Express.js • Node.js •  Bootstrap • JSX"
+  },
+  {
+    "title": "Spotify",
+    "startDate": "2023",
+    "short_description":"",
+    "description": "This full-stack, Spotify-clone was created using Django and Python with a SQL database. It uses user authentication. Users have full CRUD capabilities on two models, which have 1:1, 1:M, and M:M relationships throughout the site.",
+    "images": [],
+    "GHurl": "https://github.com/EmilyJarecki/Spotify_Django",
+    "tech": "Python • Django • PostgreSQL • HTML5 • CSS3 • JQuery"
+  },
+  {
+    "title": "Aviato",
+    "startDate": "2023",
+    "short_description":"",
+    "description": "Aviato is a full-stack e-commerce site inpired by today's growing small businesses. Created independently in a single week, it was built using MongoDB, Express.js, React.js, and Node.js (MERN) with the addition of bcrypt for user authentication. It uses three models and has full CRUD functionality throughout the site.",
+    "images": [],
+    "url": "https://aviato-e-comm.netlify.app",
+    "GHurl": "https://github.com/EmilyJarecki/e-commerce",
+    "tech": "React.js • JavaScript • HTML5 • CSS3 • MongoDB • Express.js • Node.js • Heroku • Netlify • Bootstrap • Bcrypt • JSX"
+  },
+  {
+    "title": "Twitter 2.0",
+    "short_description":"",
+    "startDate": "2022",
+    "description": "Completed in a single week with a Software Engineer a full-stack web application using MongoDB, Express.js, React.js, and Node.js (MERN) and a user-empathetic interface with full-CRUD (create, read, update, and delete) capabilities through RESTful routing. Backend contains two database models (a tweets and comments schema) which serves user JSON data to the front-end.",
+    "images": [],
+    "url": "https://twittertwopoint0.netlify.app/",
+    "GHurl": "https://github.com/orgs/SpeakerTwitter/repositories",
+    "tech": "React.js • JavaScript • HTML5 • CSS3 • MongoDB • Express.js • Node.js • Heroku • Netlify • Bootstrap • JSX"
+  },
+  {
+    "title": "Portfolio Template",
+    "startDate": "2023",
+    "short_description":"",
+    "description": "This project was merely an exercise in UX/UI design and text animation, built in a few hours. Not mobile responsive nor uses React.js, although it has the potential.",
+    "images": [],
+    "url": "https://portfoliocoverpage.netlify.app",
+    "GHurl": "https://github.com/EmilyJarecki/newspaper-portfolio-page",
+    "tech": "HTML5 • CSS3"
+  },
+  {
+    "title": "HyperRealism",
+    "startDate": "2023",
+    "short_description":"",
+    "description": "A functioning TI-108 elementary school calculator. The purpose of this exercise was to get as close as possible to real-life.",
+    "images": [],
+    "url": "https://throwbackcalc.netlify.app",
+    "GHurl": "https://github.com/EmilyJarecki/calculator",
+    "tech": "JavaScript • HTML5 • CSS3"
+  },
+  {
+    "title": "Interval Timer",
+    "startDate": "2023",
+    "short_description":"",
+    "description": "A user-customizable interval timer. Responsive on mobile devices.",
+    "images": [],
+    "url": "https://roundintervaltimer.netlify.app",
+    "GHurl": "https://github.com/EmilyJarecki/intervaltimer",
+    "tech": "JavaScript • HTML5 • CSS3"
+  },
+  {
+    "title": "The Weather Window",
+    "startDate": "2022",
+    "short_description":"",
+    "description": "A client-rendered application that leverages third-party API and the read-only Navigator.geolocation property to deliver immediate weather forecast results for client's current and future weather. Collaborated with a Software Engineer in a one week sprint, engaged in daily-standups, worked on separate tickets, co-coding on blockers, and practicing version-control to create the wireframe, user stories and development of the application using React.js, JavaScript, JSX, and Node.js.",
+    "images": [],
+    "url": "https://weather-window.netlify.app",
+    "GHurl": "https://github.com/EmilyJarecki/Project-2-Weather-App",
+    "tech": "HTML5 • CSS3 • React.js • Node.js • Bootstrap"
+  },
+  {
+    "title": "2048",
+    "startDate": "2022",
+    "short_description":"",
+    "description": "A browser-based game utilizing JavaScript, CSS, and HTML. Responsive on mobile devices.",
+    "images": [],
+    "url": "https://iridescent-melba-0e8849.netlify.app",
+    "GHurl": "https://github.com/EmilyJarecki/my2048",
+    "tech": "JavaScript • HTML5 • CSS3"
+  },
+  {
+    "title": "Candy Crush Memory Match",
+    "startDate": "2022",
+    "short_description":"",
+    "description": "A browser-based game to engage users in a Candy Crush Saga inspired memory matching game.",
+    "images": [],
+    "url": "https://splendorous-kashata-58ad30.netlify.app",
+    "GHurl": "https://github.com/EmilyJarecki/Candy-Crush-Saga-Memory-Matcher",
+    "tech": "JavaScript • HTML5 • CSS3"
+  }
+]

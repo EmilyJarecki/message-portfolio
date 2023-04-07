@@ -1,8 +1,11 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 
-const Messaging = () => {
+const Messaging = ({description}) => {
   return (
-    <div>Messaging</div>
+    <div>
+      <h1>Messaging</h1>
+      <p>{description}</p>
+    </div>
   )
 }
 
