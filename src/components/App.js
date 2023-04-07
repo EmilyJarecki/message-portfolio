@@ -1,4 +1,5 @@
 import "../App.css";
+import "../projects.css";
 import Projects from "./Projects";
 import Messaging from "./Messaging";
 import About from "./About";

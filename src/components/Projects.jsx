@@ -21,12 +21,18 @@ const Projects = () => {
   const loaded = () => {
     return (
       <div className="parent2">
-        <div>
+        <div className="proj-scroll">
           {projects.map((project, index) => (
             <div key={index}>
-              <h4 onClick={() => handleProjectClick(project)}>
-                {project.title}
-              </h4>
+              <div onClick={() => handleProjectClick(project)}>
+              <img
+                    src={project.images[0]}
+                    alt="projectImages"
+                    className="project-icon"
+                  />
+                <h3 className="proj-title">{project.title}</h3>
+                <p>{project.short_description}</p>
+              </div>
             </div>
           ))}
         </div>
