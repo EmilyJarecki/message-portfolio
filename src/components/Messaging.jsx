@@ -3,9 +3,7 @@ import React, { useState, useEffect } from "react";
 const Messaging = ({ title, description, github, live, convo, images }) => {
   const [inputValue, setInputValue] = useState("");
   const [output, setOutput] = useState("");
-  const [inputValuesList, setInputValuesList] = useState(
-    () => JSON.parse(localStorage.getItem("conversation")) || [] // Load conversation from local storage on component mount
-  );
+  const [inputValuesList, setInputValuesList] = useState([]);
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
@@ -20,13 +18,20 @@ const Messaging = ({ title, description, github, live, convo, images }) => {
   };
 
   const handleClearConversation = () => {
-    setInputValuesList([]); // Clear input values list
-    localStorage.removeItem("conversation"); // Remove conversation from local storage
+    setInputValuesList([]);
+    localStorage.removeItem(`${title}_conversation`); // Remove conversation from local storage using the unique identifier
   };
 
   useEffect(() => {
-    localStorage.setItem("conversation", JSON.stringify(inputValuesList)); // Save conversation to local storage on input values list update
-  }, [inputValuesList]);
+    const localStorageKey = `${title}_conversation`;
+    const storedConversation = JSON.parse(localStorage.getItem(localStorageKey)) || [];
+    setInputValuesList(storedConversation); // Set stored conversation to inputValuesList state
+  }, [title]);
+
+  useEffect(() => {
+    const localStorageKey = `${title}_conversation`;
+    localStorage.setItem(localStorageKey, JSON.stringify(inputValuesList));
+  }, [inputValuesList, title]);
 
   return (
     <div className="messaging-container">
@@ -55,6 +60,7 @@ const Messaging = ({ title, description, github, live, convo, images }) => {
               {inputValuesList.map((inputValue, index) => (
                 <div key={index}>{inputValue}</div>
               ))}
+              
               {output}
             </div>
           {/* )} */}
