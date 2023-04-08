@@ -13,7 +13,7 @@ const Messaging = ({ title, description, github, live, convo, images }) => {
 
   const handleButtonClick = () => {
     if (inputValue === "yes") {
-      setOutput("Okay! Here they are!");
+      setOutput("It's nice to meet you!");
     }
     setInputValue("");
     setInputValuesList([...inputValuesList, inputValue]);
@@ -22,7 +22,6 @@ const Messaging = ({ title, description, github, live, convo, images }) => {
   const handleClearConversation = () => {
     setInputValuesList([]); // Clear input values list
     localStorage.removeItem("conversation"); // Remove conversation from local storage
-    setOutput(""); // Clear output
   };
 
   useEffect(() => {
@@ -45,23 +44,21 @@ const Messaging = ({ title, description, github, live, convo, images }) => {
           ))}
         </div>
         <p>{description}</p>
+        {images.map((pic, index) => (
+          <p key={index} className="">
+            <img src={pic} alt="pic" className="convo-pic" />
+          </p>
+        ))}
         <div>
-          {output && (
-            <div>        <div>
-          {inputValuesList.map((inputValue, index) => (
-            <div key={index}>{inputValue}</div>
-          ))}
-        </div>
-              {output}
-              {images.map((pic, index) => (
-                <p key={index} className="">
-                  <img src={pic} alt="pic" className="convo-pic" />
-                </p>
+          {/* {output && ( */}
+            <div>
+              {inputValuesList.map((inputValue, index) => (
+                <div key={index}>{inputValue}</div>
               ))}
+              {output}
             </div>
-          )}
+          {/* )} */}
         </div>
-
       </div>
       <div className="mess-in">
         <input
@@ -72,6 +69,7 @@ const Messaging = ({ title, description, github, live, convo, images }) => {
         />
         <button onClick={handleButtonClick}>Submit</button>
       </div>
+      {/* Render the entered input values as div elements */}
       <button onClick={handleClearConversation}>Clear Conversation</button>{" "}
       {/* Add a button to clear conversation */}
     </div>

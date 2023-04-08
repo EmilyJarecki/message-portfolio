@@ -23,6 +23,7 @@
     "startDate": "2023",
     "short_description":"A Spotify clone",
     "description": "This full-stack, Spotify-clone was created using Django and Python with a SQL database. It uses user authentication. Users have full CRUD capabilities on two models, which have 1:1, 1:M, and M:M relationships throughout the site.",
+    "convo": ["I'll be able to sing my favorite songs!", "A Spotify Clone."],
     "images": [
       "images/Spotify/p2.jpg",
       "images/Spotify/p1.jpg"

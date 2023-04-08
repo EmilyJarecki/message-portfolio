@@ -63,6 +63,7 @@ const Projects = () => {
               live={selectedProject.url}
               convo={selectedProject.convo}
               images={selectedProject.images}
+              
             />
           )}
         </div>
