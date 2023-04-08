@@ -64,7 +64,7 @@ const Messaging = ({ title, description, github, live, convo, images }) => {
             </p>
           ))}
         </div>
-        <p>{description}</p>
+        {/* <p>{description}</p> */}
         {images.map((pic, index) => (
           <p key={index} className="">
             <img src={pic} alt="pic" className="convo-pic" />
@@ -91,9 +91,7 @@ const Messaging = ({ title, description, github, live, convo, images }) => {
         />
         <button onClick={handleButtonClick}>Submit</button>
       </div>
-      {/* Render the entered input values as div elements */}
-      <button onClick={handleClearConversation}>Clear Conversation</button>{" "}
-      {/* Add a button to clear conversation */}
+      <button onClick={handleClearConversation}>Clear Conversation</button>
     </div>
   );
 };

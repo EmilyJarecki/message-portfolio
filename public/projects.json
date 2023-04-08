@@ -4,7 +4,7 @@
     "startDate": "2023",
     "short_description":"A task & reward gamification app",
     "description": "A collaboration with 4 Software Developers and 3 UI/UX designers to create a gamified task assignment and reward system using MERN, 4 relational database models, and user authentication in a 4-day hackathon that won crowd favorite.",
-    "convo": ["Behold Quest Runner!", "Built during the GA 4-day Hackathon!", "It won Crowd Favorite.", "MERN-Stack"],
+    "convo": ["Behold 🌟Quest Runner!🌟", "Quest Runner is a gamified task assignment and reward web app- it allows parents to manage their children's tasks and rewards using virtual coins.", "And it has a medieval theme!🧝‍♀️🧙‍♂️🏰", "5 Software Developers🧑‍💻 and 3 UI/UX Designers🧑‍🎨 tirelessly collaborated for 4 days during General Assembly's Spring 2023 Hackathon.", "But it paid off- Quest Runner won Crowd Favorite!🚀🥇", "💻Technologies used: React.js, JavaScript, Express.js, Node.js, MongoDB, Bootstrap, HTML5, CSS3, JWT", "Amazing Work! Here are some pics! You've got to check it out!👀"],
     "images": [
       "images/QuestRunner/p2.jpg",
       "images/QuestRunner/p1.jpg",
@@ -23,7 +23,7 @@
     "startDate": "2023",
     "short_description":"A Spotify clone",
     "description": "This full-stack, Spotify-clone was created using Django and Python with a SQL database. It uses user authentication. Users have full CRUD capabilities on two models, which have 1:1, 1:M, and M:M relationships throughout the site.",
-    "convo": ["I'll be able to sing my favorite songs!", "A Spotify Clone."],
+    "convo": ["Here is a Spotify clone", "It's full-stack built with Django and Python with a PostgreSQL database.", "It has secure user authentication and users have full CRUD capabilities on 2 models.", "Meaning they can create, view, update, and delete their music data", "It looks like the real thing!"],
     "images": [
       "images/Spotify/p2.jpg",
       "images/Spotify/p1.jpg"
@@ -38,6 +38,7 @@
     "startDate": "2023",
     "short_description":"An e-commerce site",
     "description": "Aviato is a full-stack e-commerce site inpired by today's growing small businesses. Created independently in a single week, it was built using MongoDB, Express.js, React.js, and Node.js (MERN) with the addition of bcrypt for user authentication. It uses three models and has full CRUD functionality throughout the site.",
+    "convo": ["Aviato is an e-commerce platform🛍, created singlehandedly.", "In a week!", "It's complete with 3 relational database models and user authentication via bcrypt, incorporating local storage for the cart feature", "💻Technologies used: React.js, JavaScript, Express.js, Node.js, MongoDB, Bootstrap, HTML5, CSS3, JWT", "It's got a really slick user interface- so minimal, so modern, so clean. Check it out!", "And while you're there, can you buy me that jacket?😊"],
     "images": [
       "images/Aviato/p2.jpg",
       "images/Aviato/p1.jpg",
@@ -56,6 +57,7 @@
     "short_description":"A Twitter clone",
     "startDate": "2022",
     "description": "Completed in a single week with a Software Engineer a full-stack web application using MongoDB, Express.js, React.js, and Node.js (MERN) and a user-empathetic interface with full-CRUD (create, read, update, and delete) capabilities through RESTful routing. Backend contains two database models (a tweets and comments schema) which serves user JSON data to the front-end.",
+    "convo": ["Reverse engineered Twitter🐥, it's a full-stack, full-CRUD web application that lets you tweet and comment.", "Built with the MERN-stack- MongoDB, Express.js, React.js, and Node.js", "Take a look!👀"],
     "images": [
       "images/Twitter2.0/p1.jpg",
       "images/Twitter2.0/p2.jpg"
@@ -70,6 +72,7 @@
     "startDate": "2023",
     "short_description":"Portfolio Template",
     "description": "This project was merely an exercise in UX/UI design and text animation, built in a few hours. Not mobile responsive nor uses React.js, although it has the potential.",
+    "convo": ["Built for design practice🎨, this portfolio template features a clean design with lots of fun moving parts.", "Feel free to fork and clone, and make this your own portfolio!"],
     "images": ["images/Port/p1.jpg"],
     "url": "https://portfoliocoverpage.netlify.app",
     "GHurl": "https://github.com/EmilyJarecki/newspaper-portfolio-page",
@@ -81,6 +84,7 @@
     "startDate": "2023",
     "short_description":"HyperRealistic Calculator",
     "description": "A functioning TI-108 elementary school calculator. The purpose of this exercise was to get as close as possible to real-life.",
+    "convo": ["A calculator🧮- the oldest trick in the book for a developer but this one is not just fully- functioning..", "It's as really as can get.", "It's like I can reach in and pick it up...🙀"],
     "images": ["images/Calc/p1.jpg"],
     "url": "https://throwbackcalc.netlify.app",
     "GHurl": "https://github.com/EmilyJarecki/calculator",
@@ -92,6 +96,7 @@
     "startDate": "2023",
     "short_description":"A workout timer",
     "description": "A user-customizable interval timer. Responsive on mobile devices.",
+    "convo": ["This one's for you..", "It's a workout interval timer- set the work time, rest time, and GO!🚴"],
     "images": ["images/Timer/p1.jpg"],
     "url": "https://roundintervaltimer.netlify.app",
     "GHurl": "https://github.com/EmilyJarecki/intervaltimer",
@@ -103,6 +108,7 @@
     "startDate": "2022",
     "short_description":"A weather app",
     "description": "A client-rendered application that leverages third-party API and the read-only Navigator.geolocation property to deliver immediate weather forecast results for client's current and future weather. Collaborated with a Software Engineer in a one week sprint, engaged in daily-standups, worked on separate tickets, co-coding on blockers, and practicing version-control to create the wireframe, user stories and development of the application using React.js, JavaScript, JSX, and Node.js.",
+    "convo": ["In a one week sprint, 2 Software Engineers took React.js, the Open-Meteo API, and the Navigator.geolocation and made the Weather Window.", "It immediatelty tells you the weather of your location as well as the weekly forecast!🌤🌧⛄️"],
     "images": [
       "images/WeatherWindow/p1.jpg",
       "images/WeatherWindow/p2.jpg"
@@ -117,6 +123,7 @@
     "startDate": "2022",
     "short_description":"A copy of 2048",
     "description": "A browser-based game utilizing JavaScript, CSS, and HTML. Responsive on mobile devices.",
+    "convo": ["This is the exact replica of 2048!", "Try not to play too long..."],
     "images": ["images/2048/p1.jpg"],
     "url": "https://iridescent-melba-0e8849.netlify.app",
     "GHurl": "https://github.com/EmilyJarecki/my2048",
@@ -128,6 +135,7 @@
     "startDate": "2022",
     "short_description":"A candy-crush inspired memory match",
     "description": "A browser-based game to engage users in a Candy Crush Saga inspired memory matching game.",
+    "convo": ["A candy-crush inspired memory match game.", "Utilizes metric system that keeps track of how many matches were correct and incorrect.", "Built simply with JavaScript, CSS3, and HTML5.", "It's so pretty💫🍬"],
     "images": ["images/CandyCrush/p1.jpg"],
     "url": "https://splendorous-kashata-58ad30.netlify.app",
     "GHurl": "https://github.com/EmilyJarecki/Candy-Crush-Saga-Memory-Matcher",
