@@ -53,8 +53,8 @@ const Projects = () => {
             </div>
           ))}
         </div>
-
-        <div>
+        {selectedProject ? (
+          <div>
           {selectedProject && (
             <Messaging
               title={selectedProject.title}
@@ -67,6 +67,10 @@ const Projects = () => {
             />
           )}
         </div>
+        )
+        : <p>nothing selected</p>
+      }
+        
       </div>
     );
   };
