@@ -20,6 +20,10 @@
 
 
 /* CONVO */
+.gh-icon{
+  width: 25px;
+  height: 25px;
+}
 .messaging{
     overflow: auto;
     height: 80vh;

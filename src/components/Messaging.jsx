@@ -24,7 +24,8 @@ const Messaging = ({ title, description, github, live, convo, images }) => {
 
   useEffect(() => {
     const localStorageKey = `${title}_conversation`;
-    const storedConversation = JSON.parse(localStorage.getItem(localStorageKey)) || [];
+    const storedConversation =
+      JSON.parse(localStorage.getItem(localStorageKey)) || [];
     setInputValuesList(storedConversation); // Set stored conversation to inputValuesList state
   }, [title]);
 
@@ -38,8 +39,23 @@ const Messaging = ({ title, description, github, live, convo, images }) => {
       <div className="messaging-content">
         <div className="sticky">
           <p>{title}</p>
-          <p>{github}</p>
-          <p>{live}</p>
+          {github ? (
+            <a href={github}>
+              <img
+                className="gh-icon"
+                src="https://img.icons8.com/material-outlined/512/github.png"
+              />
+            </a>
+          ) : null}
+
+          {live ? (
+            <a href={live}>
+              <img
+                className="gh-icon"
+                src="https://img.icons8.com/ios/512/live-photos.png"
+              />
+            </a>
+          ) : null}
         </div>
         <div>
           {convo.map((item, index) => (
@@ -56,13 +72,13 @@ const Messaging = ({ title, description, github, live, convo, images }) => {
         ))}
         <div>
           {/* {output && ( */}
-            <div>
-              {inputValuesList.map((inputValue, index) => (
-                <div key={index}>{inputValue}</div>
-              ))}
-              
-              {output}
-            </div>
+          <div>
+            {inputValuesList.map((inputValue, index) => (
+              <div key={index}>{inputValue}</div>
+            ))}
+
+            {output}
+          </div>
           {/* )} */}
         </div>
       </div>
