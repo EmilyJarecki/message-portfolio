@@ -33,44 +33,51 @@ const Projects = () => {
     return (
       <div className="parent2">
         <div className="proj-scroll">
-          <h1 className="sticky">About Me</h1>
-          <input
-            type="text"
-            placeholder="Search by title..."
-            onChange={handleSearchChange}
-          />
+          <div className="search-bar sticky">
+            <h1 className="chats">Chats</h1>
+            <input
+              className="search"
+              type="text"
+              placeholder="Search by title..."
+              onChange={handleSearchChange}
+            />
+          </div>
+
           {filteredProjects.map((project, index) => (
-            <div key={index}>
-              <div onClick={() => handleProjectClick(project)}>
+            <div key={index} className="">
+              <div
+                className="project-group"
+                onClick={() => handleProjectClick(project)}
+              >
                 <img
                   src={project.images[0]}
                   alt="projectImages"
                   className="project-icon"
                 />
-                <h3 className="proj-title">{project.title}</h3>
-                <p>{project.short_description}</p>
+                <div className="project-context">
+                  <p className="proj-title">{project.title}</p>
+                  <p>{project.short_description}</p>
+                </div>
               </div>
             </div>
           ))}
         </div>
         {selectedProject ? (
-          <div>
-          {selectedProject && (
-            <Messaging
-              title={selectedProject.title}
-              description={selectedProject.description}
-              github={selectedProject.GHurl}
-              live={selectedProject.url}
-              convo={selectedProject.convo}
-              images={selectedProject.images}
-              
-            />
-          )}
-        </div>
-        )
-        : <p>nothing selected</p>
-      }
-        
+          <div className="">
+            {selectedProject && (
+              <Messaging
+                title={selectedProject.title}
+                description={selectedProject.description}
+                github={selectedProject.GHurl}
+                live={selectedProject.url}
+                convo={selectedProject.convo}
+                images={selectedProject.images}
+              />
+            )}
+          </div>
+        ) : (
+          <p>nothing selected</p>
+        )}
       </div>
     );
   };

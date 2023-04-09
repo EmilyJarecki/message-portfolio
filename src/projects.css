@@ -1,64 +1,78 @@
-.proj-scroll, .messaging{
-    overflow: auto;
-    height: 80vh;
+.proj-scroll,
+.messaging {
+  overflow: auto;
+  height: 80vh;
 }
-.project-icon{
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    object-fit: cover;
+.search-bar {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
-.sticky{
-    position: -webkit-sticky; /* Safari */
-    position: sticky;
-    margin-top: 0;
-    top: 0;
-    background-color: rgb(178, 178, 182);
+.search {
+  width: 90%;
 }
-
-
-
+.project-icon {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.sticky {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  margin-top: 0;
+  top: 0;
+  background-color: rgb(178, 178, 182);
+}
+.project-group {
+  display: flex;
+}
+::-webkit-scrollbar {
+  background-color: transparent; /* Set scrollbar background color to transparent */
+width: 0px;
+}
 
 /* CONVO */
-.gh-icon{
+.gh-icon {
   width: 25px;
   height: 25px;
 }
-.messaging{
-    overflow: auto;
-    height: 80vh;
-    position: relative;
+.messaging {
+  overflow: auto;
+  height: 80vh;
+  position: relative;
 }
-.convo-pic{
-    width: 100px;
+.convo-pic {
+  width: 100px;
 }
-.mess-in{
-    position: sticky;
-    bottom: 0;
-    width: 100%;
-    padding: 10px;
-    background-color: aqua;
+.mess-in {
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 .messaging-container {
-    display: flex;
-    flex-direction: column;
-    height: 80vh; /* Set the desired height for the container */
-  }
-  
-  .messaging-content {
-    flex: 1;
-    overflow-y: auto; /* Add scrollbar to the content if needed */
-  }
-  
-  .mess-in {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 8px;
-    background-color: #f5f5f5;
-  }
-  
-  .input-field {
-    flex: 1;
-    margin-right: 8px;
-  }
+  display: flex;
+  flex-direction: column;
+  height: 80vh; /* Set the desired height for the container */
+}
+
+.messaging-content {
+  flex: 1;
+  overflow-y: auto; /* Add scrollbar to the content if needed */
+}
+
+.mess-title, .mess-gh, .mess-live{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.proj-sum, .proj-icons{
+  display: flex;
+}
+.input{
+  text-align: end;
+}

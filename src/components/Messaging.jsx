@@ -10,9 +10,9 @@ const Messaging = ({ title, description, github, live, convo, images }) => {
   };
 
   const handleButtonClick = () => {
-    if (inputValue === "yes") {
-      setOutput("It's nice to meet you!");
-    }
+    // if (inputValue) {
+    //   setOutput("Hi! It's nice to meet you!");
+    // }
     setInputValue("");
     setInputValuesList([...inputValuesList, inputValue]);
   };
@@ -37,30 +37,34 @@ const Messaging = ({ title, description, github, live, convo, images }) => {
   return (
     <div className="messaging-container">
       <div className="messaging-content">
-        <div className="sticky">
-          <p className="">
-            <img src={images[0]} alt="pic" className="project-icon" />
-          </p>
-          <p>{title}</p>
-          {github ? (
-            <a href={github}>
-              <img
-                className="gh-icon"
-                src="https://img.icons8.com/material-outlined/512/github.png"
-              />
-            </a>
-          ) : null}
+        <div className="sticky mess-title">
+          <div className="proj-sum">
+            <p className="mess-icon">
+              <img src={images[0]} alt="pic" className="project-icon" />
+            </p>
+            <p className="mess-title">{title}</p>
+          </div>
 
-          {live ? (
-            <a href={live}>
-              <img
-                className="gh-icon"
-                src="https://img.icons8.com/ios/512/live-photos.png"
-              />
-            </a>
-          ) : null}
+          <div className="proj-icons">
+            {github ? (
+              <a className="mess-gh" href={github}>
+                <img
+                  className="gh-icon"
+                  src="https://img.icons8.com/material-outlined/512/github.png"
+                />
+              </a>
+            ) : null}
+            {live ? (
+              <a className="mess-live" href={live}>
+                <img
+                  className="gh-icon"
+                  src="https://img.icons8.com/ios/512/live-photos.png"
+                />
+              </a>
+            ) : null}
+          </div>
         </div>
-        <div>
+        <div className="">
           {convo.map((item, index) => (
             <p key={index} className="convo-item">
               {item}
@@ -75,23 +79,30 @@ const Messaging = ({ title, description, github, live, convo, images }) => {
         <div>
           <div>
             {inputValuesList.map((inputValue, index) => (
-              <div key={index}>{inputValue}</div>
+              <div className="input" key={index}>
+                {inputValue}
+              </div>
             ))}
-
-            {output}
+            <div className="output">{output}</div>
           </div>
         </div>
       </div>
       <div className="mess-in">
-        <input
-          type="text"
-          value={inputValue}
-          onChange={handleInputChange}
-          className="input-field"
-        />
-        <button onClick={handleButtonClick}>Submit</button>
+        <button className="clear" onClick={handleClearConversation}>
+          Clear Conversation
+        </button>
+        <div className="submitting">
+          <input
+            type="text"
+            value={inputValue}
+            onChange={handleInputChange}
+            className="input-field"
+          />
+          <button className="" onClick={handleButtonClick}>
+            Submit
+          </button>
+        </div>
       </div>
-      <button onClick={handleClearConversation}>Clear Conversation</button>
     </div>
   );
 };
