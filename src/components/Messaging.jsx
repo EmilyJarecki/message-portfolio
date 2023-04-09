@@ -42,7 +42,7 @@ const Messaging = ({ title, description, github, live, convo, images }) => {
             <p className="mess-icon">
               <img src={images[0]} alt="pic" className="project-icon" />
             </p>
-            <p className="mess-title">{title}</p>
+            <p className="head-title">{title}</p>
           </div>
 
           <div className="proj-icons">

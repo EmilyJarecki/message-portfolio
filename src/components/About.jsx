@@ -40,7 +40,7 @@ const About = () => {
             </div>
 
             <div className="accordion" onClick={handleToggleAbout}>
-              <h2 className="">About</h2>
+              <p className="">About</p>
               <div className="acc-body">
                               {isOpenAbout && <p className="">{desc.about}</p>}
 
@@ -50,7 +50,7 @@ const About = () => {
 
 
             <div className="accordion" onClick={handleToggleResume}>
-              <h2 className="">Resume</h2>
+              <p className="">Resume</p>
               {isOpenResume && (
                 <div className="acc-body">
                                   <a
@@ -68,7 +68,7 @@ const About = () => {
 
 
             <div className="accordion" onClick={handleToggleContact}>
-              <h2 className="">Contact</h2>
+              <p className="">Contact</p>
               {isOpenContact && (
                 <div className="contact-info acc-body">
                   <a className="" href={desc.linkedIn} target="_blank">

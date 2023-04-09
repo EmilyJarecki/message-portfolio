@@ -76,7 +76,7 @@ const Projects = () => {
             )}
           </div>
         ) : (
-          <p>nothing selected</p>
+          <div className="messaging-container">nothing selected</div>
         )}
       </div>
     );
