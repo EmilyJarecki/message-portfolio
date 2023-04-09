@@ -38,6 +38,9 @@ const Messaging = ({ title, description, github, live, convo, images }) => {
     <div className="messaging-container">
       <div className="messaging-content">
         <div className="sticky">
+          <p className="">
+            <img src={images[0]} alt="pic" className="project-icon" />
+          </p>
           <p>{title}</p>
           {github ? (
             <a href={github}>
@@ -64,14 +67,12 @@ const Messaging = ({ title, description, github, live, convo, images }) => {
             </p>
           ))}
         </div>
-        {/* <p>{description}</p> */}
         {images.map((pic, index) => (
           <p key={index} className="">
             <img src={pic} alt="pic" className="convo-pic" />
           </p>
         ))}
         <div>
-          {/* {output && ( */}
           <div>
             {inputValuesList.map((inputValue, index) => (
               <div key={index}>{inputValue}</div>
@@ -79,7 +80,6 @@ const Messaging = ({ title, description, github, live, convo, images }) => {
 
             {output}
           </div>
-          {/* )} */}
         </div>
       </div>
       <div className="mess-in">
