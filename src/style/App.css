@@ -47,13 +47,13 @@ body {
   .messaging-container{
       backdrop-filter: blur(21px) saturate(143%);
   -webkit-backdrop-filter: blur(21px) saturate(143%);
-  background-color: rgba(38, 51, 74, 0.48);
+  background-color: rgba(82, 88, 97, 0.48);
   border: 1px solid rgba(255, 255, 255, 0.125);
   }
 
 .proj-scroll, .div2, .mess-title{
-  backdrop-filter: blur(21px) saturate(143%);
-  -webkit-backdrop-filter: blur(21px) saturate(143%);
-  background-color: rgba(22, 35, 57, 0.48);
+  backdrop-filter: blur(21px) saturate(123%);
+  /* -webkit-backdrop-filter: blur(21px) saturate(143%); */
+  background-color: rgba(11, 18, 30, 0.48);
   border: 1px solid rgba(255, 255, 255, 0.125);
 }

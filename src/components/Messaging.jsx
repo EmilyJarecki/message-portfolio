@@ -64,17 +64,18 @@ const Messaging = ({ title, description, github, live, convo, images }) => {
             ) : null}
           </div>
         </div>
-        <div className="">
+        <div className="convo-map">
           {convo.map((item, index) => (
-            <p key={index} className="convo-item">
-              {item}
-            </p>
+            <div key={index} className="convo-item">
+              <img src={images[0]} alt="pic" className="convo-icon" />
+              <div className="message">{item}</div>
+            </div>
           ))}
         </div>
         {images.map((pic, index) => (
-          <p key={index} className="">
+          <div key={index} className="m-pic">
             <img src={pic} alt="pic" className="convo-pic" />
-          </p>
+          </div>
         ))}
         <div>
           <div>
