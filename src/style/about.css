@@ -1,0 +1,19 @@
+.about-cover{
+
+}
+.desc-img, .desc-name, .desc-title{
+    text-align: center;
+}
+
+
+
+
+.contact-info{
+    display: flex;
+    flex-direction: column;
+}
+a {
+    text-decoration: none;
+    color: black
+}
+/* accordion */

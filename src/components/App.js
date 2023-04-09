@@ -1,5 +1,8 @@
-import "../App.css";
-import "../projects.css";
+import "../style/App.css";
+import "../style/projects.css";
+import "../style/messaging.css";
+import "../style/about.css";
+
 import Projects from "./Projects";
 import Messaging from "./Messaging";
 import About from "./About";

@@ -1,0 +1,35 @@
+.proj-scroll,
+.messaging {
+  overflow: auto;
+  height: 80vh;
+}
+.search-bar {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.search {
+  width: 90%;
+}
+.project-icon {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.sticky {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  margin-top: 0;
+  top: 0;
+  background-color: rgb(178, 178, 182);
+}
+.project-group {
+  display: flex;
+}
+::-webkit-scrollbar {
+  background-color: transparent; /* Set scrollbar background color to transparent */
+width: 0px;
+}

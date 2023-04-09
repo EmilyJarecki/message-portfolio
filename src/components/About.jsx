@@ -33,32 +33,53 @@ const About = () => {
       <div>
         {about.map((desc, index) => (
           <div key={index}>
-            <p>{desc.image}</p>
-            <p>{desc.name}</p>
-            <p>{desc.title}</p>
-            <div onClick={handleToggleAbout}>
-              <h2>About</h2>
-              {isOpenAbout && <p>{desc.about}</p>}
+            <div className="about-cover">
+              <p className="desc-img">{desc.image}</p>
+              <p className="desc-name">{desc.name}</p>
+              <p className="desc-title">{desc.title}</p>
             </div>
-            <div onClick={handleToggleResume}>
-              <h2>Resume</h2>
+
+            <div className="accordion" onClick={handleToggleAbout}>
+              <h2 className="">About</h2>
+              <div className="acc-body">
+                              {isOpenAbout && <p className="">{desc.about}</p>}
+
+              </div>
+            </div>
+
+
+
+            <div className="accordion" onClick={handleToggleResume}>
+              <h2 className="">Resume</h2>
               {isOpenResume && (
-                <a
+                <div className="acc-body">
+                                  <a
                   className="download-button"
                   target="_blank"
                   href="https://drive.google.com/file/d/1J0nQfA7mHHTgftLOruim18z0ADKrGBhI/view?usp=share_link"
                 >
                   Download Resume
                 </a>
+                </div>
+
               )}
             </div>
-            <div onClick={handleToggleContact}>
-              <h2>Contact</h2>
+
+
+
+            <div className="accordion" onClick={handleToggleContact}>
+              <h2 className="">Contact</h2>
               {isOpenContact && (
-                <div>
-                  <p><a href={desc.linkedIn} target="_blank">LinkedIn</a></p>
-                  <p><a href={desc.github} target="_blank">GitHub</a></p>
-                  <p><a href="mailto:jareckiemily@yahoo.com" className="email">jareckiemily@yahoo.com</a></p>
+                <div className="contact-info acc-body">
+                  <a className="" href={desc.linkedIn} target="_blank">
+                    LinkedIn
+                  </a>
+                  <a className="" href={desc.github} target="_blank">
+                    GitHub
+                  </a>
+                  <a className="email" href="mailto:jareckiemily@yahoo.com">
+                    jareckiemily@yahoo.com
+                  </a>
                 </div>
               )}
             </div>
@@ -68,7 +89,16 @@ const About = () => {
     );
   };
 
-  return about ? loaded() : <h1>Loading...</h1>;
+  return about ? (
+    loaded()
+  ) : (
+    <div class="newtons-cradle">
+      <div class="newtons-cradle__dot"></div>
+      <div class="newtons-cradle__dot"></div>
+      <div class="newtons-cradle__dot"></div>
+      <div class="newtons-cradle__dot"></div>
+    </div>
+  );
 };
 
 export default About;
