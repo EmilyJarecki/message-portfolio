@@ -1,7 +1,12 @@
 /* CONVO */
+.proj-icons{
+  margin-right: 5%;
+}
 .gh-icon {
     width: 25px;
     height: 25px;
+    -webkit-filter: invert(100%);
+    margin: 0 5px;
   }
   .messaging {
     overflow: auto;
@@ -11,13 +16,7 @@
   .convo-pic {
     width: 100px;
   }
-  .mess-in {
-    position: sticky;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-  }
+ 
   .messaging-container {
     display: flex;
     flex-direction: column;
@@ -34,12 +33,19 @@
     align-items: center;
     justify-content: space-between;
   }
+  .head-title{
+    margin-left: 20px;
+  }
   .proj-sum, .proj-icons{
     display: flex;
+  }
+  .proj-sum{
+    margin-left: 5%;
   }
   .input{
     text-align: end;
   }
+
 .convo-icon{
   width: 35px;
   height: 35px;
@@ -76,3 +82,25 @@ margin-bottom: 20px;
   /* -webkit-backdrop-filter: blur(21px) saturate(143%); */
   background-color: rgba(2, 7, 14, 0.197);
 }
+.submitting{
+  /* width: 100%; */
+}
+.input-field{
+  background-color: transparent;
+  border-radius: 10px;
+  backdrop-filter: blur(px) saturate(53%);
+  background-color: rgba(2, 7, 14, 0.197);
+  border: none;
+  outline: none;
+  color: white;
+  /* width: 80%; */
+  height: 30px;
+} 
+.mess-in {
+    position: sticky;
+    bottom: 0;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    justify-content: space-between;
+  }

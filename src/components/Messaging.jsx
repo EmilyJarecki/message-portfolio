@@ -90,7 +90,7 @@ const Messaging = ({ title, description, github, live, convo, images }) => {
       </div>
       <div className="mess-in">
         <button className="clear" onClick={handleClearConversation}>
-          Clear Conversation
+          X
         </button>
         <div className="submitting">
           <input
@@ -100,7 +100,7 @@ const Messaging = ({ title, description, github, live, convo, images }) => {
             className="input-field"
           />
           <button className="" onClick={handleButtonClick}>
-            Submit
+            ^
           </button>
         </div>
       </div>
