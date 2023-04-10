@@ -29,10 +29,24 @@
   /* glassmorphism */
 
 }
-.project-group {
-  display: flex;
-}
 ::-webkit-scrollbar {
   background-color: transparent; /* Set scrollbar background color to transparent */
 width: 0px;
+}
+.project-group {
+  display: flex;
+  padding: 15px 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.125);
+
+}
+.project-context{
+  margin-left: 30px;
+}
+.proj-desc, .proj-title{
+  margin: 0;
+}
+.proj-desc{
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.436);
+  margin-top: 10px;
 }

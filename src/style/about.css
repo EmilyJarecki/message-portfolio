@@ -1,19 +1,26 @@
 .about-cover{
-
+    border-bottom: 1px solid rgba(255, 255, 255, 0.125);
+    margin-bottom: 40px;
 }
 .desc-img, .desc-name, .desc-title{
     text-align: center;
 }
-
-
-
-
 .contact-info{
     display: flex;
     flex-direction: column;
 }
 a {
     text-decoration: none;
-    color: black
+    color: white;
 }
 /* accordion */
+.accordion{
+    padding: 0 30px;
+}
+.acc-body{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.125);
+    padding: 0 30px;
+}
+.about, .resume, .contact{
+    font-size: 18px;;
+}

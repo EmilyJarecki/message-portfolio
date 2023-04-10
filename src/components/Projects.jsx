@@ -56,7 +56,7 @@ const Projects = () => {
                 />
                 <div className="project-context">
                   <p className="proj-title">{project.title}</p>
-                  <p>{project.short_description}</p>
+                  <p className="proj-desc" >{project.short_description}</p>
                 </div>
               </div>
             </div>

@@ -70,7 +70,7 @@
   {
     "title": "Portfolio Template",
     "startDate": "2023",
-    "short_description":"Portfolio Template",
+    "short_description":"Portfolio template",
     "description": "This project was merely an exercise in UX/UI design and text animation, built in a few hours. Not mobile responsive nor uses React.js, although it has the potential.",
     "convo": ["Built for design practice🎨, this portfolio template features a clean design with lots of fun moving parts.", "Feel free to fork and clone, and make this your own portfolio!"],
     "images": ["images/Port/p1.jpg"],
@@ -82,7 +82,7 @@
   {
     "title": "HyperRealism",
     "startDate": "2023",
-    "short_description":"HyperRealistic Calculator",
+    "short_description":"HyperRealistic TI-108 calculator",
     "description": "A functioning TI-108 elementary school calculator. The purpose of this exercise was to get as close as possible to real-life.",
     "convo": ["A calculator🧮- the oldest trick in the book for a developer but this one is not just fully- functioning..", "It's as really as can get.", "It's like I can reach in and pick it up...🙀"],
     "images": ["images/Calc/p1.jpg"],
@@ -133,7 +133,7 @@
   {
     "title": "Candy Crush Memory Match",
     "startDate": "2022",
-    "short_description":"A candy-crush inspired memory match",
+    "short_description":"A Candy-Crush memory match",
     "description": "A browser-based game to engage users in a Candy Crush Saga inspired memory matching game.",
     "convo": ["A candy-crush inspired memory match game.", "Utilizes metric system that keeps track of how many matches were correct and incorrect.", "Built simply with JavaScript, CSS3, and HTML5.", "It's so pretty💫🍬"],
     "images": ["images/CandyCrush/p1.jpg"],

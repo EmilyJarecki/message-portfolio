@@ -40,46 +40,51 @@ const About = () => {
             </div>
 
             <div className="accordion" onClick={handleToggleAbout}>
-              <p className="">About</p>
-              <div className="acc-body">
-                              {isOpenAbout && <p className="">{desc.about}</p>}
-
-              </div>
-            </div>
-
-
-
-            <div className="accordion" onClick={handleToggleResume}>
-              <p className="">Resume</p>
-              {isOpenResume && (
+              <p className="about">About</p>
+              {isOpenAbout && (
                 <div className="acc-body">
-                                  <a
-                  className="download-button"
-                  target="_blank"
-                  href="https://drive.google.com/file/d/1J0nQfA7mHHTgftLOruim18z0ADKrGBhI/view?usp=share_link"
-                >
-                  Download Resume
-                </a>
+                  <p className="">{desc.about}</p>
                 </div>
-
               )}
             </div>
 
-
+            <div className="accordion" onClick={handleToggleResume}>
+              <p className="resume">Resume</p>
+              {isOpenResume && (
+                <div className="acc-body">
+                  <p>
+                    <a
+                      className="download-button"
+                      target="_blank"
+                      href="https://drive.google.com/file/d/1J0nQfA7mHHTgftLOruim18z0ADKrGBhI/view?usp=share_link"
+                    >
+                      Download Resume
+                    </a>
+                  </p>
+                </div>
+              )}
+            </div>
 
             <div className="accordion" onClick={handleToggleContact}>
-              <p className="">Contact</p>
+              <p className="contact">Contact</p>
               {isOpenContact && (
                 <div className="contact-info acc-body">
-                  <a className="" href={desc.linkedIn} target="_blank">
-                    LinkedIn
-                  </a>
-                  <a className="" href={desc.github} target="_blank">
-                    GitHub
-                  </a>
-                  <a className="email" href="mailto:jareckiemily@yahoo.com">
-                    jareckiemily@yahoo.com
-                  </a>
+                  <p>
+                    <a className="" href={desc.linkedIn} target="_blank">
+                      LinkedIn
+                    </a>
+                  </p>
+                  <p>
+                    {" "}
+                    <a className="" href={desc.github} target="_blank">
+                      GitHub
+                    </a>
+                  </p>
+                  <p>
+                    <a className="email" href="mailto:jareckiemily@yahoo.com">
+                      jareckiemily@yahoo.com
+                    </a>
+                  </p>
                 </div>
               )}
             </div>
