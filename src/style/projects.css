@@ -1,6 +1,5 @@
-.proj-scroll,
-.messaging {
-  overflow: auto;
+.proj-scroll {
+  overflow-y: auto;
   height: 80vh;
 }
 .search-bar {

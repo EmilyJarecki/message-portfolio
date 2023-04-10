@@ -42,25 +42,26 @@ const Projects = () => {
               onChange={handleSearchChange}
             />
           </div>
-
-          {filteredProjects.map((project, index) => (
-            <div key={index} className="">
-              <div
-                className="project-group"
-                onClick={() => handleProjectClick(project)}
-              >
-                <img
-                  src={project.images[0]}
-                  alt="projectImages"
-                  className="project-icon"
-                />
-                <div className="project-context">
-                  <p className="proj-title">{project.title}</p>
-                  <p className="proj-desc" >{project.short_description}</p>
+          <div className="proj-map">
+            {filteredProjects.map((project, index) => (
+              <div key={index} className="">
+                <div
+                  className="project-group"
+                  onClick={() => handleProjectClick(project)}
+                >
+                  <img
+                    src={project.images[0]}
+                    alt="projectImages"
+                    className="project-icon"
+                  />
+                  <div className="project-context">
+                    <p className="proj-title">{project.title}</p>
+                    <p className="proj-desc">{project.short_description}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
         {selectedProject ? (
           <div className="">

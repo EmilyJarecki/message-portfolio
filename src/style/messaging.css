@@ -8,11 +8,7 @@
     -webkit-filter: invert(100%);
     margin: 0 5px;
   }
-  .messaging {
-    overflow: auto;
-    height: 80vh;
-    position: relative;
-  }
+
   .convo-pic {
     width: 100px;
   }
@@ -32,6 +28,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+  .mess-title{
+    height: 80px;
   }
   .head-title{
     margin-left: 20px;

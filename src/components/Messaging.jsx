@@ -36,55 +36,58 @@ const Messaging = ({ title, description, github, live, convo, images }) => {
 
   return (
     <div className="messaging-container">
-      <div className="messaging-content">
-        <div className="sticky mess-title">
-          <div className="proj-sum">
-            <p className="mess-icon">
-              <img src={images[0]} alt="pic" className="project-icon" />
-            </p>
-            <p className="head-title">{title}</p>
-          </div>
+      {" "}
+      <div className="sticky mess-title">
+        <div className="proj-sum">
+          <p className="mess-icon">
+            <img src={images[0]} alt="pic" className="project-icon" />
+          </p>
+          <p className="head-title">{title}</p>
+        </div>
 
-          <div className="proj-icons">
-            {github ? (
-              <a className="mess-gh" href={github}>
-                <img
-                  className="gh-icon"
-                  src="https://img.icons8.com/material-outlined/512/github.png"
-                />
-              </a>
-            ) : null}
-            {live ? (
-              <a className="mess-live" href={live}>
-                <img
-                  className="gh-icon"
-                  src="https://img.icons8.com/ios/512/live-photos.png"
-                />
-              </a>
-            ) : null}
-          </div>
+        <div className="proj-icons">
+          {github ? (
+            <a className="mess-gh" href={github}>
+              <img
+                className="gh-icon"
+                src="https://img.icons8.com/material-outlined/512/github.png"
+              />
+            </a>
+          ) : null}
+          {live ? (
+            <a className="mess-live" href={live}>
+              <img
+                className="gh-icon"
+                src="https://img.icons8.com/ios/512/live-photos.png"
+              />
+            </a>
+          ) : null}
         </div>
-        <div className="convo-map">
-          {convo.map((item, index) => (
-            <div key={index} className="convo-item">
-              <img src={images[0]} alt="pic" className="convo-icon" />
-              <div className="message">{item}</div>
-            </div>
-          ))}
-        </div>
-        {images.map((pic, index) => (
-          <div key={index} className="m-pic">
-            <img src={pic} alt="pic" className="convo-pic" />
-          </div>
-        ))}
-        <div>
-          <div>
-            {inputValuesList.map((inputValue, index) => (
-              <div className="input" key={index}>
-                {inputValue}
+      </div>
+      <div className="messaging-content">
+        <div className="messaging-convo">
+          <div className="convo-map">
+            {convo.map((item, index) => (
+              <div key={index} className="convo-item">
+                <img src={images[0]} alt="pic" className="convo-icon" />
+                <div className="message">{item}</div>
               </div>
             ))}
-            <div className="output">{output}</div>
+          </div>
+          {images.map((pic, index) => (
+            <div key={index} className="m-pic">
+              <img src={pic} alt="pic" className="convo-pic" />
+            </div>
+          ))}
+          <div>
+            <div>
+              {inputValuesList.map((inputValue, index) => (
+                <div className="input" key={index}>
+                  {inputValue}
+                </div>
+              ))}
+              <div className="output">{output}</div>
+            </div>
           </div>
         </div>
       </div>
