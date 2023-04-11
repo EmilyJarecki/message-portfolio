@@ -63,7 +63,7 @@ margin-bottom: 20px;
   margin-left: 20px;
   padding: 10px;
   font-size: 14px;
-  border-radius: 10px;
+  border-radius: 10px 10px 10px 0;
   backdrop-filter: blur(px) saturate(53%);
   background-color: rgba(2, 7, 14, 0.197);
 }
@@ -74,7 +74,7 @@ margin-bottom: 20px;
 .convo-pic{
   margin-left: 75px;
   width: 10%;  
-  border-radius: 10px;
+  border-radius: 10px 10px 10px 0;
   padding: 10px;
   margin-bottom: 20px;
   backdrop-filter: blur(px) saturate(53%);
@@ -104,3 +104,16 @@ margin-bottom: 20px;
     justify-content: space-between;
   }
 
+.input{
+  margin: 0 5% 5% 0;
+  font-size: 14px;
+  display: flex;
+justify-content: end;
+}
+.input-value{
+background-color: rgb(220, 62, 149);
+  font-size: 14px;
+padding: 10px;
+border-radius: 10px 10px 0 10px;
+margin: 0;
+}

@@ -108,16 +108,12 @@ const Messaging = ({ title, description, github, live, convo, images }) => {
               </div>
             )}
           </div>
-          <div>
-            <div>
-              {inputValuesList.map((inputValue, index) => (
-                <div className="input" key={index}>
-                  {inputValue}
-                </div>
-              ))}
-              <div className="output">{output}</div>
-            </div>
-          </div>
+          {inputValuesList.map((inputValue, index) => (
+              <div className="input" key={index}>
+                <p className="input-value input">{inputValue}</p>
+              </div>
+          ))}
+          <div className="output">{output}</div>
         </div>
       </div>
       <div className="mess-in">
