@@ -4,6 +4,14 @@ const Messaging = ({ title, description, github, live, convo, images }) => {
   const [inputValue, setInputValue] = useState("");
   const [output, setOutput] = useState("");
   const [inputValuesList, setInputValuesList] = useState([]);
+  const [modalIndex, setModalIndex] = useState(-1); // Added state for modal index
+
+  const openModal = (index) => {
+    setModalIndex(index); // Set the index of the image to display in the modal
+  };
+  const closeModal = () => {
+    setModalIndex(-1); // Reset the modal index to close the modal
+  };
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
@@ -74,11 +82,32 @@ const Messaging = ({ title, description, github, live, convo, images }) => {
               </div>
             ))}
           </div>
+
           {images.map((pic, index) => (
             <div key={index} className="m-pic">
-              <img src={pic} alt="pic" className="convo-pic" />
+              <img
+                src={pic}
+                alt="pic"
+                className="convo-pic"
+                onClick={() => openModal(index)}
+              />
             </div>
           ))}
+
+          {/* Render modal */}
+          <div className="display-modal">
+            {modalIndex !== -1 && (
+              <div className="modal">
+                {/* Display the image in the modal */}
+                <img
+                  src={images[modalIndex]}
+                  alt="pic"
+                  className="modal-image"
+                  onClick={closeModal}
+                />
+              </div>
+            )}
+          </div>
           <div>
             <div>
               {inputValuesList.map((inputValue, index) => (
