@@ -138,6 +138,7 @@ const Messaging = ({ title, description, github, live, convo, images, starred })
             value={inputValue}
             onChange={handleInputChange}
             className="input-field"
+            placeholder="Send a message..."
           />
           <div className="message-icon">
             <img

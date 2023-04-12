@@ -35,14 +35,12 @@ const Projects = () => {
         <div className="proj-scroll">
           <div className="search-bar sticky">
             <h1 className="chats">Chats</h1>
-            <div className="search-div">
               <input
                 className="search"
                 type="text"
                 placeholder="Search by title..."
                 onChange={handleSearchChange}
               />
-            </div>
           </div>
           <div className="proj-map">
             {filteredProjects.map((project, index) => (

@@ -8,23 +8,17 @@
   flex-direction: column;
 }
 
-.search-div {
-  width: 90%;
-  display: flex;
-  justify-content: center;
+.search {
+  width: 80%;
   background-color: rgba(166, 175, 189, 0.185);
   height: 30px;
   border-radius: 10px;
-}
-.search {
-  background-color: transparent;
   border: none;
   outline: none;
   color: rgba(255, 255, 255, 0.436);
-  background-color: transparent;
-  height: 27px;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
+  padding-left: 40px;
 }
 .search::placeholder {
   color: rgba(255, 255, 255, 0.436);
