@@ -51,14 +51,25 @@ const Projects = () => {
                   className="project-group"
                   onClick={() => handleProjectClick(project)}
                 >
-                  <img
-                    src={project.images[0]}
-                    alt="projectImages"
-                    className="project-icon"
-                  />
-                  <div className="project-context">
-                    <p className="proj-title">{project.title}</p>
-                    <p className="proj-desc">{project.short_description}</p>
+                  <div className="project-mess-info">
+                    <img
+                      src={project.images[0]}
+                      alt="projectImages"
+                      className="project-icon"
+                    />
+                    <div className="project-context">
+                      <p className="proj-title">{project.title}</p>
+                      <p className="proj-desc">{project.short_description}</p>
+                    </div>
+                  </div>
+
+                  <div className="star-div">
+                    {project.starred ? (
+                      <img
+                        className="star-icon"
+                        src="https://img.icons8.com/color/512/filled-star.png"
+                      />
+                    ) : null}
                   </div>
                 </div>
               </div>
@@ -75,6 +86,7 @@ const Projects = () => {
                 live={selectedProject.url}
                 convo={selectedProject.convo}
                 images={selectedProject.images}
+                starred={selectedProject.starred}
               />
             )}
           </div>

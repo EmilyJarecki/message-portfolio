@@ -55,6 +55,11 @@
   display: flex;
   padding: 15px 30px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.125);
+  justify-content: space-between;
+}
+.project-mess-info{
+  display: flex;
+  flex-direction: row;
 }
 .project-context {
   margin-left: 30px;

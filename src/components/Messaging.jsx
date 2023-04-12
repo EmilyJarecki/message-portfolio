@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const Messaging = ({ title, description, github, live, convo, images }) => {
+const Messaging = ({ title, description, github, live, convo, images, starred }) => {
   const [inputValue, setInputValue] = useState("");
   const [output, setOutput] = useState("");
   const [inputValuesList, setInputValuesList] = useState([]);
@@ -51,6 +51,14 @@ const Messaging = ({ title, description, github, live, convo, images }) => {
             <img src={images[0]} alt="pic" className="project-icon" />
           </p>
           <p className="head-title">{title}</p>
+          <div className="star-div">
+                    {starred ? (
+                      <img
+                        className="star-icon"
+                        src="https://img.icons8.com/color/512/filled-star.png"
+                      />
+                    ) : null}
+                  </div>
         </div>
 
         <div className="proj-icons">
@@ -109,27 +117,35 @@ const Messaging = ({ title, description, github, live, convo, images }) => {
             )}
           </div>
           {inputValuesList.map((inputValue, index) => (
-              <div className="input" key={index}>
-                <p className="input-value input">{inputValue}</p>
-              </div>
+            <div className="input" key={index}>
+              <p className="input-value input">{inputValue}</p>
+            </div>
           ))}
           <div className="output">{output}</div>
         </div>
       </div>
       <div className="mess-in">
-        <button className="clear" onClick={handleClearConversation}>
-          X
-        </button>
         <div className="submitting">
+          <div className="message-icon">
+            <img
+              onClick={handleClearConversation}
+              className="gh-icon"
+              src="https://img.icons8.com/ios/512/broom.png"
+            />
+          </div>
           <input
             type="text"
             value={inputValue}
             onChange={handleInputChange}
             className="input-field"
           />
-          <button className="" onClick={handleButtonClick}>
-            ^
-          </button>
+          <div className="message-icon">
+            <img
+              onClick={handleButtonClick}
+              className="gh-icon"
+              src="https://img.icons8.com/external-prettycons-lineal-prettycons/512/external-send-social-media-prettycons-lineal-prettycons.png"
+            />
+          </div>
         </div>
       </div>
     </div>

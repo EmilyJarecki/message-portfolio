@@ -8,7 +8,15 @@
     -webkit-filter: invert(100%);
     margin: 0 5px;
   }
-
+.star-icon{
+  width: 25px;
+  height: 25px;
+}
+.star-div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
   .convo-pic {
     width: 100px;
   }
@@ -33,7 +41,7 @@
     height: 80px;
   }
   .head-title{
-    margin-left: 20px;
+    margin: 0 20px;
   }
   .proj-sum, .proj-icons{
     display: flex;
@@ -82,7 +90,10 @@ margin-bottom: 20px;
   background-color: rgba(2, 7, 14, 0.197);
 }
 .submitting{
-  /* width: 100%; */
+display: flex;
+margin-bottom: 15px;
+width: 100%;
+justify-content: flex-end;
 }
 .input-field{
   background-color: transparent;
@@ -92,7 +103,7 @@ margin-bottom: 20px;
   border: none;
   outline: none;
   color: white;
-  /* width: 80%; */
+  width: 80%;
   height: 30px;
 } 
 .mess-in {
@@ -101,7 +112,7 @@ margin-bottom: 20px;
     margin-left: 5%;
     margin-right: 5%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
   }
 
 .input{
@@ -116,4 +127,10 @@ background-color: rgb(220, 62, 149);
 padding: 10px;
 border-radius: 10px 10px 0 10px;
 margin: 0;
+}
+.message-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
 }
