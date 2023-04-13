@@ -8,6 +8,7 @@
     height: 25px;
     -webkit-filter: invert(100%);
     margin: 0 5px;
+    cursor: pointer;
   }
 .star-icon{
   width: 25px;
@@ -93,9 +94,6 @@ margin-bottom: 20px;
 .selectedImage{
   height: 60vh;
 }
-
-
-
 
 .submitting{
 display: flex;
