@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import Messaging from "./Messaging";
 
+
 const Projects = () => {
   const [projects, setProjects] = useState(null);
   const [selectedProject, setSelectedProject] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
+
 
   useEffect(() => {
     async function getProjectData() {

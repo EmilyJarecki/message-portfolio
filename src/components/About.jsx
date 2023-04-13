@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const About = () => {
   const [about, setAbout] = useState(null);
-  const [isOpenAbout, setIsOpenAbout] = useState(false);
-  const [isOpenContact, setIsOpenContact] = useState(false);
-  const [isOpenResume, setIsOpenResume] = useState(false); // New state for resume
 
   useEffect(() => {
     async function getAboutData() {
@@ -14,19 +16,6 @@ const About = () => {
     }
     getAboutData();
   }, []);
-
-  const handleToggleAbout = () => {
-    setIsOpenAbout(!isOpenAbout);
-  };
-
-  const handleToggleContact = () => {
-    setIsOpenContact(!isOpenContact);
-  };
-
-  const handleToggleResume = () => {
-    // Function to toggle resume
-    setIsOpenResume(!isOpenResume);
-  };
 
   const loaded = () => {
     return (
@@ -38,21 +27,51 @@ const About = () => {
               <p className="desc-name">{desc.name}</p>
               <p className="desc-title">{desc.title}</p>
             </div>
-
-            <div className="accordion" onClick={handleToggleAbout}>
-              <p className="about">About</p>
-              {isOpenAbout && (
-                <div className="acc-body">
-                  <p className="">{desc.about}</p>
-                </div>
-              )}
-            </div>
-
-            <div className="accordion" onClick={handleToggleResume}>
-              <p className="resume">Resume</p>
-              {isOpenResume && (
-                <div className="acc-body">
-                  <p>
+            <div>
+              <Accordion
+                sx={{
+                  backgroundColor: "transparent",
+                  border: "none",
+                  boxShadow: "none",
+                }}
+              >
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon sx={{ color: "white" }} />}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
+                  <Typography
+                    sx={{ color: "white", fontWeight: "bold", fontWeight: 300 }}
+                  >
+                    About
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails sx={{ backgroundColor: "transparent" }}>
+                  <Typography sx={{ color: "white", fontWeight: 300 }}>
+                    {desc.about}
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
+              <Accordion
+                sx={{
+                  backgroundColor: "transparent",
+                  border: "none",
+                  boxShadow: "none",
+                }}
+              >
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon sx={{ color: "white" }} />}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
+                  <Typography
+                    sx={{ color: "white", fontWeight: "bold", fontWeight: 300 }}
+                  >
+                    Resume
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails sx={{ backgroundColor: "transparent" }}>
+                  <Typography sx={{ color: "white", fontWeight: 300 }}>
                     <a
                       className="download-button"
                       target="_blank"
@@ -60,33 +79,48 @@ const About = () => {
                     >
                       Download Resume
                     </a>
-                  </p>
-                </div>
-              )}
-            </div>
-
-            <div className="accordion" onClick={handleToggleContact}>
-              <p className="contact">Contact</p>
-              {isOpenContact && (
-                <div className="contact-info acc-body">
-                  <p>
-                    <a className="" href={desc.linkedIn} target="_blank">
-                      LinkedIn
-                    </a>
-                  </p>
-                  <p>
-                    {" "}
-                    <a className="" href={desc.github} target="_blank">
-                      GitHub
-                    </a>
-                  </p>
-                  <p>
-                    <a className="email" href="mailto:jareckiemily@yahoo.com">
-                      jareckiemily@yahoo.com
-                    </a>
-                  </p>
-                </div>
-              )}
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>{" "}
+              <Accordion
+                sx={{
+                  backgroundColor: "transparent",
+                  border: "none",
+                  boxShadow: "none",
+                }}
+              >
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon sx={{ color: "white" }} />}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
+                  <Typography
+                    sx={{ color: "white", fontWeight: "bold", fontWeight: 300 }}
+                  >
+                    Contact
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails sx={{ backgroundColor: "transparent" }}>
+                  <Typography sx={{ color: "white", fontWeight: 300 }}>
+                    <p>
+                      <a className="" href={desc.linkedIn} target="_blank">
+                        LinkedIn
+                      </a>
+                    </p>
+                    <p>
+                      {" "}
+                      <a className="" href={desc.github} target="_blank">
+                        GitHub
+                      </a>
+                    </p>
+                    <p>
+                      <a className="email" href="mailto:jareckiemily@yahoo.com">
+                        jareckiemily@yahoo.com
+                      </a>
+                    </p>
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
             </div>
           </div>
         ))}
