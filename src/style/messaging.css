@@ -90,8 +90,9 @@ margin-bottom: 20px;
   /* -webkit-backdrop-filter: blur(21px) saturate(143%); */
   background-color: rgba(2, 7, 14, 0.197);
 }
-
-
+.selectedImage{
+  width: 10%;
+}
 
 
 

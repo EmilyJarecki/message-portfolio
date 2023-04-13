@@ -1,17 +1,46 @@
 import React, { useState, useEffect } from "react";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
+import Modal from "@mui/material/Modal";
 
-const Messaging = ({ title, description, github, live, convo, images, starred }) => {
+const Messaging = ({
+  title,
+  description,
+  github,
+  live,
+  convo,
+  images,
+  starred,
+}) => {
+  const style = {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    width: "80%",
+    bgcolor: "black",
+    border: "2px solid #000",
+    boxShadow: 24,
+    p: 4,
+  };
+
   const [inputValue, setInputValue] = useState("");
   const [output, setOutput] = useState("");
   const [inputValuesList, setInputValuesList] = useState([]);
-  const [modalIndex, setModalIndex] = useState(-1); // Added state for modal index
+  const [open, setOpen] = useState(false);
+  const[selectedImage, setSelectedImage] = useState();
 
-  const openModal = (index) => {
-    setModalIndex(index); // Set the index of the image to display in the modal
+  const handleOpen = (imageSrc) => {
+    setOpen(true);
+    setSelectedImage(imageSrc); // Set the clicked image URL as the selected image in state
   };
-  const closeModal = () => {
-    setModalIndex(-1); // Reset the modal index to close the modal
-  };
+
+  const handleClose = () => setOpen(false);
+
+
+
+
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
@@ -44,7 +73,24 @@ const Messaging = ({ title, description, github, live, convo, images, starred })
 
   return (
     <div className="messaging-container">
-      {" "}
+      <div>
+        <Modal
+          open={open}
+          onClose={handleClose}
+          aria-labelledby="modal-modal-title"
+          aria-describedby="modal-modal-description"
+        >
+          <Box sx={style}>
+          <img src={selectedImage} className="selectedImage" alt="Image Title" />
+            {/* <Typography id="modal-modal-title" variant="h6" component="h2">
+              Image Title
+            </Typography>
+            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+              Image Description
+            </Typography> */}
+          </Box>
+        </Modal>
+      </div>
       <div className="sticky mess-title">
         <div className="proj-sum">
           <p className="mess-icon">
@@ -52,13 +98,13 @@ const Messaging = ({ title, description, github, live, convo, images, starred })
           </p>
           <p className="head-title">{title}</p>
           <div className="star-div">
-                    {starred ? (
-                      <img
-                        className="star-icon"
-                        src="https://img.icons8.com/color/512/filled-star.png"
-                      />
-                    ) : null}
-                  </div>
+            {starred ? (
+              <img
+                className="star-icon"
+                src="https://img.icons8.com/color/512/filled-star.png"
+              />
+            ) : null}
+          </div>
         </div>
 
         <div className="proj-icons">
@@ -97,25 +143,10 @@ const Messaging = ({ title, description, github, live, convo, images, starred })
                 src={pic}
                 alt="pic"
                 className="convo-pic"
-                onClick={() => openModal(index)}
+                onClick={() => handleOpen(pic)}
               />
             </div>
           ))}
-
-          {/* Render modal */}
-          <div className="display-modal">
-            {modalIndex !== -1 && (
-              <div className="modal">
-                {/* Display the image in the modal */}
-                <img
-                  src={images[modalIndex]}
-                  alt="pic"
-                  className="modal-image"
-                  onClick={closeModal}
-                />
-              </div>
-            )}
-          </div>
           {inputValuesList.map((inputValue, index) => (
             <div className="input" key={index}>
               <p className="input-value input">{inputValue}</p>
