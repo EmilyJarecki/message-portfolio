@@ -3,6 +3,7 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
+import Badge from "@mui/material/Badge";
 
 const Messaging = ({
   title,
@@ -24,14 +25,14 @@ const Messaging = ({
     p: 4,
     display: "flex", // Add display: "flex" to center the items
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
   };
 
   const [inputValue, setInputValue] = useState("");
   const [output, setOutput] = useState("");
   const [inputValuesList, setInputValuesList] = useState([]);
   const [open, setOpen] = useState(false);
-  const[selectedImage, setSelectedImage] = useState();
+  const [selectedImage, setSelectedImage] = useState();
 
   const handleOpen = (imageSrc) => {
     setOpen(true);
@@ -75,7 +76,11 @@ const Messaging = ({
           aria-describedby="modal-modal-description"
         >
           <Box sx={style}>
-          <img src={selectedImage} className="selectedImage" alt="Image Title" />
+            <img
+              src={selectedImage}
+              className="selectedImage"
+              alt="Image Title"
+            />
             {/* <Typography id="modal-modal-title" variant="h6" component="h2">
               Image Title
             </Typography>
@@ -88,7 +93,14 @@ const Messaging = ({
       <div className="sticky mess-title">
         <div className="proj-sum">
           <p className="mess-icon">
-            <img src={images[0]} alt="pic" className="project-icon" />
+            <Badge
+              color="success"
+              overlap="circular"
+              badgeContent=" "
+              variant="dot"
+            >
+              <img src={images[0]} alt="pic" className="project-icon" />
+            </Badge>
           </p>
           <p className="head-title">{title}</p>
           <div className="star-div">

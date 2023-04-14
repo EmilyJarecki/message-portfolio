@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Messaging from "./Messaging";
-import Box from "@mui/material/Box";
-import Stack from "@mui/material/Stack";
 import Badge from "@mui/material/Badge";
 
 const Projects = () => {
