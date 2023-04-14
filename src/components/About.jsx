@@ -5,8 +5,7 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Avatar from '@mui/material/Avatar';
-import Stack from '@mui/material/Stack';
-import { green, pink } from '@mui/material/colors';
+import { pink } from '@mui/material/colors';
 const About = () => {
   const [about, setAbout] = useState(null);
   const [expanded, setExpanded] = React.useState(false);
