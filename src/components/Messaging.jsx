@@ -40,14 +40,9 @@ const Messaging = ({
 
   const handleClose = () => setOpen(false);
 
-
-
-
-
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
   };
-
   const handleButtonClick = () => {
     // if (inputValue) {
     //   setOutput("Hi! It's nice to meet you!");
@@ -55,19 +50,16 @@ const Messaging = ({
     setInputValue("");
     setInputValuesList([...inputValuesList, inputValue]);
   };
-
   const handleClearConversation = () => {
     setInputValuesList([]);
     localStorage.removeItem(`${title}_conversation`); // Remove conversation from local storage using the unique identifier
   };
-
   useEffect(() => {
     const localStorageKey = `${title}_conversation`;
     const storedConversation =
       JSON.parse(localStorage.getItem(localStorageKey)) || [];
     setInputValuesList(storedConversation); // Set stored conversation to inputValuesList state
   }, [title]);
-
   useEffect(() => {
     const localStorageKey = `${title}_conversation`;
     localStorage.setItem(localStorageKey, JSON.stringify(inputValuesList));

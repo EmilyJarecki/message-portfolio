@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Messaging from "./Messaging";
-
+import Box from "@mui/material/Box";
+import Stack from "@mui/material/Stack";
+import Badge from "@mui/material/Badge";
 
 const Projects = () => {
   const [projects, setProjects] = useState(null);
@@ -37,12 +39,12 @@ const Projects = () => {
         <div className="proj-scroll">
           <div className="search-bar sticky">
             <h1 className="chats">Chats</h1>
-              <input
-                className="search"
-                type="text"
-                placeholder="Search by title..."
-                onChange={handleSearchChange}
-              />
+            <input
+              className="search"
+              type="text"
+              placeholder="Search by title..."
+              onChange={handleSearchChange}
+            />
           </div>
           <div className="proj-map">
             {filteredProjects.map((project, index) => (
@@ -52,11 +54,17 @@ const Projects = () => {
                   onClick={() => handleProjectClick(project)}
                 >
                   <div className="project-mess-info">
-                    <img
-                      src={project.images[0]}
-                      alt="projectImages"
-                      className="project-icon"
-                    />
+                    {/* <Stack direction="row"> */}
+                    <Badge color="success" overlap="circular" badgeContent=" " variant="dot">
+                        <img
+                          src={project.images[0]}
+                          alt="projectImages"
+                          className="project-icon"
+                          
+                        />
+                      </Badge>
+                    {/* </Stack> */}
+
                     <div className="project-context">
                       <p className="proj-title">{project.title}</p>
                       <p className="proj-desc">{project.short_description}</p>
