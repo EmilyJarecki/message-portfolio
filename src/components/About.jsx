@@ -4,7 +4,9 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-
+import Avatar from '@mui/material/Avatar';
+import Stack from '@mui/material/Stack';
+import { green, pink } from '@mui/material/colors';
 const About = () => {
   const [about, setAbout] = useState(null);
   const [expanded, setExpanded] = React.useState(false);
@@ -28,7 +30,8 @@ const About = () => {
         {about.map((desc, index) => (
           <div key={index}>
             <div className="about-cover">
-              <p className="desc-img">{desc.image}</p>
+            
+              <div className="desc-img"><Avatar sx={{ bgcolor: pink[500] }}>EJ</Avatar></div>
               <p className="desc-name">{desc.name}</p>
               <p className="desc-title">{desc.title}</p>
             </div>

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Messaging from "./Messaging";
 import Badge from "@mui/material/Badge";
 
+
 const Projects = () => {
   const [projects, setProjects] = useState(null);
   const [selectedProject, setSelectedProject] = useState(null);

@@ -2,8 +2,13 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.125);
     margin-bottom: 40px;
 }
-.desc-img, .desc-name, .desc-title{
+.desc-name, .desc-title{
     text-align: center;
+}
+.desc-img{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
 }
 .contact-info{
     display: flex;

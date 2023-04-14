@@ -137,7 +137,14 @@ const Messaging = ({
           <div className="convo-map">
             {convo.map((item, index) => (
               <div key={index} className="convo-item">
-                <img src={images[0]} alt="pic" className="convo-icon" />
+                <Badge
+                  color="success"
+                  overlap="circular"
+                  badgeContent=" "
+                  variant="dot"
+                >
+                  <img src={images[0]} alt="pic" className="convo-icon" />
+                </Badge>
                 <div className="message">{item}</div>
               </div>
             ))}
