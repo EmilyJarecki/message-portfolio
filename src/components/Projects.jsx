@@ -42,51 +42,70 @@ const Projects = () => {
         project.title.toLowerCase().includes(searchTerm.toLowerCase())
       )
     : [];
-
+  //   <div className="sticky mess-title">
+  //   <div className="proj-sum">
+  //     <p className="mess-icon">
+  //       <Badge
+  //         color="success"
+  //         overlap="circular"
+  //         badgeContent=" "
+  //         variant="dot"
+  //       >
+  //         <Avatar sx={{ bgcolor: pink[500] }}>EJ</Avatar>
+  //       </Badge>
+  //     </p>
+  //     <p className="head-title">Emily Jarecki</p>
+  //   </div>
+  // </div>
   const landing = () => {
     return (
       <div className="messaging-container">
-        <div className="messaging-content">
-          <div className="sticky mess-title">
-            <div className="proj-sum">
-              <p className="mess-icon">
-                <Badge
-                  color="success"
-                  overlap="circular"
-                  badgeContent=" "
-                  variant="dot"
-                >
-                  <Avatar sx={{ bgcolor: pink[500] }}>EJ</Avatar>
-                </Badge>
-              </p>
-              <p className="head-title">Emily Jarecki</p>
-            </div>
+        <div className="sticky mess-title">
+          <div className="proj-sum">
+            <p className="mess-icon">
+              <Badge
+                color="success"
+                overlap="circular"
+                badgeContent=" "
+                variant="dot"
+              >
+                <Avatar sx={{ bgcolor: pink[500] }}>EJ</Avatar>
+              </Badge>
+            </p>
+            <p className="head-title">Emily Jarecki</p>
           </div>
-          <div>
-            <img
-              className="convo-pic graduation"
-              src="https://i.imgur.com/xQtjty5.jpeg"
-            />
-            {about &&
-              about[0] &&
-              about[0].landing &&
-              about[0].landing.map((item, index) => (
-                <div className="convo-item">
-                  <Badge
-                    color="success"
-                    overlap="circular"
-                    badgeContent=" "
-                    variant="dot"
-                  >
-                    <Avatar className="convo-icon" sx={{ bgcolor: pink[500], width: 35, height: 35, fontSize: 16 }}>
-                      EJ
-                    </Avatar>
-                  </Badge>
-                  <div className="message" key={index}>
-                    {item}
+        </div>
+
+        <div className="messaging-content">
+          <div className="messaging-convo">
+            <div className="convo-map">
+              {about &&
+                about[0] &&
+                about[0].landing &&
+                about[0].landing.map((item, index) => (
+                  <div key={index} className="convo-item">
+                    <Badge
+                      color="success"
+                      overlap="circular"
+                      badgeContent=" "
+                      variant="dot"
+                    >
+                      <Avatar
+                        className="convo-icon"
+                        sx={{
+                          bgcolor: pink[500],
+                          width: 35,
+                          height: 35,
+                          fontSize: 16,
+                        }}
+                      >
+                        EJ
+                      </Avatar>
+                    </Badge>
+                    <div className="message">{item}</div>
                   </div>
-                </div>
-              ))}
+                ))}
+            </div>
           </div>
         </div>
       </div>
