@@ -42,21 +42,7 @@ const Projects = () => {
         project.title.toLowerCase().includes(searchTerm.toLowerCase())
       )
     : [];
-  //   <div className="sticky mess-title">
-  //   <div className="proj-sum">
-  //     <p className="mess-icon">
-  //       <Badge
-  //         color="success"
-  //         overlap="circular"
-  //         badgeContent=" "
-  //         variant="dot"
-  //       >
-  //         <Avatar sx={{ bgcolor: pink[500] }}>EJ</Avatar>
-  //       </Badge>
-  //     </p>
-  //     <p className="head-title">Emily Jarecki</p>
-  //   </div>
-  // </div>
+
   const landing = () => {
     return (
       <div className="messaging-container">
@@ -79,6 +65,10 @@ const Projects = () => {
         <div className="messaging-content">
           <div className="messaging-convo">
             <div className="convo-map">
+              <img
+                className="convo-pic gradution"
+                src="https://i.imgur.com/Ig1fCNV.jpg"
+              />
               {about &&
                 about[0] &&
                 about[0].landing &&
