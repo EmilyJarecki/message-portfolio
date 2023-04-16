@@ -148,3 +148,18 @@ margin: 0;
   align-items: center;
   margin: 0 10px;
 }
+.graduation{
+  width: 40%;
+}
+@media only screen and (max-width: 900px){
+  .mess-title{
+    height: 50px;
+  }
+  .messaging-container{
+    height: 60vh;
+  }
+  .star-icon{
+    width: 15px;
+    height: 15px;
+  }
+}

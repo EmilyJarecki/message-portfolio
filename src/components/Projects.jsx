@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
 import Messaging from "./Messaging";
 import Badge from "@mui/material/Badge";
+import Avatar from "@mui/material/Avatar";
+import { pink } from "@mui/material/colors";
 
 const Projects = () => {
   const [projects, setProjects] = useState(null);
   const [selectedProject, setSelectedProject] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
+  const [about, setAbout] = useState(null);
 
   useEffect(() => {
     async function getProjectData() {
@@ -13,6 +16,12 @@ const Projects = () => {
       const data = await response.json();
       setProjects(data);
     }
+    async function getAboutData() {
+      const response = await fetch("./about.json");
+      const data = await response.json();
+      setAbout(data);
+    }
+    getAboutData();
     getProjectData();
   }, []);
 
@@ -37,8 +46,49 @@ const Projects = () => {
   const landing = () => {
     return (
       <div className="messaging-container">
-        <h1>Welcome to my landing page</h1>
-        <div className="message">Hi!</div>
+        <div className="messaging-content">
+          <div className="sticky mess-title">
+            <div className="proj-sum">
+              <p className="mess-icon">
+                <Badge
+                  color="success"
+                  overlap="circular"
+                  badgeContent=" "
+                  variant="dot"
+                >
+                  <Avatar sx={{ bgcolor: pink[500] }}>EJ</Avatar>
+                </Badge>
+              </p>
+              <p className="head-title">Emily Jarecki</p>
+            </div>
+          </div>
+          <div>
+            <img
+              className="convo-pic graduation"
+              src="https://i.imgur.com/xQtjty5.jpeg"
+            />
+            {about &&
+              about[0] &&
+              about[0].landing &&
+              about[0].landing.map((item, index) => (
+                <div className="convo-item">
+                  <Badge
+                    color="success"
+                    overlap="circular"
+                    badgeContent=" "
+                    variant="dot"
+                  >
+                    <Avatar className="convo-icon" sx={{ bgcolor: pink[500], width: 35, height: 35, fontSize: 16 }}>
+                      EJ
+                    </Avatar>
+                  </Badge>
+                  <div className="message" key={index}>
+                    {item}
+                  </div>
+                </div>
+              ))}
+          </div>
+        </div>
       </div>
     );
   };
@@ -48,10 +98,9 @@ const Projects = () => {
       <div className="parent2">
         <div className="proj-scroll">
           <div className="search-bar sticky">
-
-
-            <h1 className="chats" onClick={handleChatsClick}>Chats</h1>
-
+            <h1 className="chats" onClick={handleChatsClick}>
+              Chats
+            </h1>
 
             <input
               className="search"
@@ -60,7 +109,6 @@ const Projects = () => {
               onChange={handleSearchChange}
             />
           </div>
-
 
           <div className="proj-map">
             {filteredProjects.map((project, index) => (
@@ -105,7 +153,6 @@ const Projects = () => {
           </div>
         </div>
 
-
         {selectedProject ? (
           <div className="">
             {selectedProject && (
@@ -123,8 +170,6 @@ const Projects = () => {
         ) : (
           landing()
         )}
-
-        
       </div>
     );
   };

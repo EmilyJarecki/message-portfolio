@@ -29,3 +29,15 @@ a {
 .about, .resume, .contact{
     font-size: 18px;;
 }
+@media only screen and (max-width: 900px){
+.mapped{
+    display: flex;
+}
+.accordian{
+    display: flex;
+}
+.each-accor{
+    width: 17vw;
+}
+
+}

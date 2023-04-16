@@ -4,8 +4,9 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import Avatar from '@mui/material/Avatar';
-import { pink } from '@mui/material/colors';
+import Avatar from "@mui/material/Avatar";
+import { pink } from "@mui/material/colors";
+
 const About = () => {
   const [about, setAbout] = useState(null);
   const [expanded, setExpanded] = React.useState(false);
@@ -27,16 +28,18 @@ const About = () => {
     return (
       <div>
         {about.map((desc, index) => (
-          <div key={index}>
+          <div className = "mapped" key={index}>
             <div className="about-cover">
-            
-              <div className="desc-img"><Avatar sx={{ bgcolor: pink[500] }}>EJ</Avatar></div>
+              <div className="desc-img">
+                <Avatar sx={{ bgcolor: pink[500] }}>EJ</Avatar>
+              </div>
               <p className="desc-name">{desc.name}</p>
               <p className="desc-title">{desc.title}</p>
             </div>
             <div>
-              <div>
+              <div className="accordian">
                 <Accordion
+                  className="each-accor"
                   expanded={expanded === "panel1"}
                   onChange={handleChange("panel1")}
                   sx={{
@@ -51,6 +54,7 @@ const About = () => {
                     id="panel1bh-header"
                   >
                     <Typography
+                    className="acc-title"
                       sx={{
                         color: "white",
                         fontWeight: "bold",
@@ -61,12 +65,20 @@ const About = () => {
                     </Typography>
                   </AccordionSummary>
                   <AccordionDetails sx={{ backgroundColor: "transparent" }}>
-                    <Typography sx={{ color: "white", fontWeight: 300 }}>
+                    <Typography
+                      sx={{
+                        color: "white",
+                        fontWeight: 300,
+                        fontSize: "14px",
+                        marginLeft: "20px",
+                      }}
+                    >
                       {desc.about}
                     </Typography>
                   </AccordionDetails>
                 </Accordion>
                 <Accordion
+                className="each-accor"
                   expanded={expanded === "panel2"}
                   onChange={handleChange("panel2")}
                   sx={{
@@ -91,7 +103,14 @@ const About = () => {
                     </Typography>
                   </AccordionSummary>
                   <AccordionDetails sx={{ backgroundColor: "transparent" }}>
-                    <Typography sx={{ color: "white", fontWeight: 300 }}>
+                    <Typography
+                      sx={{
+                        color: "white",
+                        fontWeight: 300,
+                        fontSize: "14px",
+                        marginLeft: "20px",
+                      }}
+                    >
                       <a
                         className="download-button"
                         target="_blank"
@@ -103,6 +122,7 @@ const About = () => {
                   </AccordionDetails>
                 </Accordion>
                 <Accordion
+                className="each-accor"
                   expanded={expanded === "panel3"}
                   onChange={handleChange("panel3")}
                   sx={{
@@ -127,14 +147,20 @@ const About = () => {
                     </Typography>
                   </AccordionSummary>
                   <AccordionDetails sx={{ backgroundColor: "transparent" }}>
-                    <Typography sx={{ color: "white", fontWeight: 300 }}>
+                    <Typography
+                      sx={{
+                        color: "white",
+                        fontWeight: 300,
+                        fontSize: "14px",
+                        marginLeft: "20px",
+                      }}
+                    >
                       <p>
                         <a className="" href={desc.linkedIn} target="_blank">
                           LinkedIn
                         </a>
                       </p>
                       <p>
-                        {" "}
                         <a className="" href={desc.github} target="_blank">
                           GitHub
                         </a>
