@@ -108,7 +108,7 @@ const Projects = () => {
         <div className="proj-scroll">
           <div className="search-bar sticky">
             <h1 className="chats" onClick={handleChatsClick}>
-              Chats
+              Projects
             </h1>
 
             <input
