@@ -49,7 +49,7 @@ const About = () => {
                   }}
                 >
                   <AccordionSummary
-                    expandIcon={<ExpandMoreIcon sx={{ color: "white" }} />}
+                    expandIcon={<ExpandMoreIcon sx={{ color: "white"}} />}
                     aria-controls="panel1bh-content"
                     id="panel1bh-header"
                   >
@@ -64,7 +64,7 @@ const About = () => {
                       About
                     </Typography>
                   </AccordionSummary>
-                  <AccordionDetails sx={{ backgroundColor: "transparent" }}>
+                  <AccordionDetails sx={{ backgroundColor: "rgba(82, 88, 97, 0.28)" }}>
                     <Typography
                       sx={{
                         color: "white",
@@ -102,7 +102,7 @@ const About = () => {
                       Resume
                     </Typography>
                   </AccordionSummary>
-                  <AccordionDetails sx={{ backgroundColor: "transparent" }}>
+                  <AccordionDetails sx={{ backgroundColor: "rgba(82, 88, 97, 0.28)"  }}>
                     <Typography
                       sx={{
                         color: "white",
@@ -146,7 +146,7 @@ const About = () => {
                       Contact
                     </Typography>
                   </AccordionSummary>
-                  <AccordionDetails sx={{ backgroundColor: "transparent" }}>
+                  <AccordionDetails sx={{ backgroundColor: "rgba(82, 88, 97, 0.28)"  }}>
                     <Typography
                       sx={{
                         color: "white",

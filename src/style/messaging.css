@@ -115,6 +115,7 @@ justify-content: flex-end;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   padding-left: 20px;
+  margin-top: 10px;
 } 
 .input-field::placeholder{
   font-family: 'Roboto', sans-serif;
