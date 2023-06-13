@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Messaging from "./Messaging";
-import Badge from "@mui/material/Badge";
-import Avatar from "@mui/material/Avatar";
-import { pink } from "@mui/material/colors";
 
 const Projects = () => {
   const [projects, setProjects] = useState(null);
@@ -49,14 +46,7 @@ const Projects = () => {
         <div className="sticky mess-title">
           <div className="proj-sum">
             <p className="mess-icon">
-              <Badge
-                color="success"
-                overlap="circular"
-                badgeContent=" "
-                variant="dot"
-              >
-                <Avatar sx={{ bgcolor: pink[500] }}>EJ</Avatar>
-              </Badge>
+EJ
             </p>
             <p className="head-title">Emily Jarecki</p>
           </div>
@@ -74,24 +64,7 @@ const Projects = () => {
                 about[0].landing &&
                 about[0].landing.map((item, index) => (
                   <div key={index} className="convo-item">
-                    <Badge
-                      color="success"
-                      overlap="circular"
-                      badgeContent=" "
-                      variant="dot"
-                    >
-                      <Avatar
-                        className="convo-icon"
-                        sx={{
-                          bgcolor: pink[500],
-                          width: 35,
-                          height: 35,
-                          fontSize: 16,
-                        }}
-                      >
-                        EJ
-                      </Avatar>
-                    </Badge>
+EJ
                     <div className="message">{item}</div>
                   </div>
                 ))}
@@ -128,18 +101,13 @@ const Projects = () => {
                 >
                   <div className="project-mess-info">
                     {/* <Stack direction="row"> */}
-                    <Badge
-                      color="success"
-                      overlap="circular"
-                      badgeContent=" "
-                      variant="dot"
-                    >
+
                       <img
                         src={project.images[0]}
                         alt="projectImages"
                         className="project-icon"
                       />
-                    </Badge>
+
                     {/* </Stack> */}
 
                     <div className="project-context">

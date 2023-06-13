@@ -2,7 +2,7 @@ import "../style/App.css";
 import "../style/projects.css";
 import "../style/messaging.css";
 import "../style/about.css";
-
+import React from 'react';
 import Projects from "./Projects";
 import Messaging from "./Messaging";
 import About from "./About";

@@ -5,7 +5,6 @@ import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import Badge from "@mui/material/Badge";
 
-
 const Messaging = ({
   title,
   description,
@@ -69,39 +68,10 @@ const Messaging = ({
 
   return (
     <div className="messaging-container">
-      <div>
-        <Modal
-          open={open}
-          onClose={handleClose}
-          aria-labelledby="modal-modal-title"
-          aria-describedby="modal-modal-description"
-        >
-          <Box sx={style}>
-            <img
-              src={selectedImage}
-              className="selectedImage"
-              alt="Image Title"
-            />
-            {/* <Typography id="modal-modal-title" variant="h6" component="h2">
-              Image Title
-            </Typography>
-            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-              Image Description
-            </Typography> */}
-          </Box>
-        </Modal>
-      </div>
       <div className="sticky mess-title">
         <div className="proj-sum">
           <p className="mess-icon">
-            <Badge
-              color="success"
-              overlap="circular"
-              badgeContent=" "
-              variant="dot"
-            >
-              <img src={images[0]} alt="pic" className="project-icon" />
-            </Badge>
+            <img src={images[0]} alt="pic" className="project-icon" />
           </p>
           <p className="head-title">{title}</p>
           <div className="star-div">
@@ -138,14 +108,7 @@ const Messaging = ({
           <div className="convo-map">
             {convo.map((item, index) => (
               <div key={index} className="convo-item">
-                <Badge
-                  color="success"
-                  overlap="circular"
-                  badgeContent=" "
-                  variant="dot"
-                >
-                  <img src={images[0]} alt="pic" className="convo-icon" />
-                </Badge>
+                <img src={images[0]} alt="pic" className="convo-icon" />
                 <div className="message">{item}</div>
               </div>
             ))}
